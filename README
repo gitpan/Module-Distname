@@ -1,0 +1,49 @@
+NAME
+    Module::Distname - find out which dist (or dists) a module lives in
+
+SYNOPSIS
+      use Module::Distname;
+      my @dists = Module::Distname->dists('Test::More');
+      print join(', ', @dists), "\n";
+
+DESCRIPTION
+    This module works by searching the .packlist files installed by
+    Module::Build and ExtUtils::MakeMaker and attempt to figure out the dist
+    names from the file paths.
+
+METHODS
+    dists( module_name )
+        Returns a hash of 'dist name' => 'version' mappings of all the
+        currently-installed dists that contain the given module. Usually
+        this would be a one-element hash. However, if the module is core it
+        will also be in the 'Perl' dist. If a version cannot be determined,
+        an empty string will be in its place.
+
+        This method will croak if it cannot load the given module.
+
+BUGS
+    *   This module relies on .packlists and will not work if these are not
+        present.
+
+    *   It can be argued that the functionality of this module should be
+        rolled into ExtUtils::Installed.
+
+    Please report any bugs you find via the CPAN RT system.
+    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Module-Distname>
+
+AUTHOR
+    Stig Brautaset <stig@brautaset.org>
+
+    You can reach the current maintainers by emailing us at
+    cpan@fotango.com, but if you're reporting bugs please use the RT system
+    mentioned above so we can track the issues you report.
+
+SEE ALSO
+    Module::Build, ExtUtils::MakeMaker, ExtUtils::Packlist
+
+COPYRIGHT
+    Copyright Fotango 2006. All rights reserved.
+
+    This module is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+

@@ -1,0 +1,11 @@
+--- #YAML:1.0
+name: Module-Distname
+version: 0.01
+author:
+  - Stig Brautaset <stig@brautaset.org>
+  - You can reach the current maintainers by emailing us at cpan@fotango.com, but
+if you're reporting bugs please use the RT system mentioned above so we can
+track the issues you report.
+abstract: find out which dist (or dists) a module lives in
+license: perl
+generated_by: Module::Build version 0.2609, without YAML.pm

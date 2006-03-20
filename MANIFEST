@@ -1,0 +1,8 @@
+Changes
+Build.PL
+lib/Module/Distname.pm
+t/distname.t
+MANIFEST
+META.yml
+Makefile.PL
+README
